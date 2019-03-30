@@ -24,18 +24,46 @@ namespace GraMonolitycznie
             Console.WriteLine("Wylosowana liczba: " + generatedNumber);
 #endif
 
-            Console.Write("Podaj swoją propozycję: ");
+            bool win = false;
 
-            int answer = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+                #region propozycja
+                Console.Write("Podaj swoją propozycję: ");
 
-            Console.WriteLine($"Podałeś wartość: {answer}");
+                int answer = 0;
 
-            if (answer < generatedNumber)
-                Console.WriteLine("Za mało!");
-            else if (answer > generatedNumber)
-                Console.WriteLine("Za dużo!");
-            else
-                Console.WriteLine("Trafiono!");
+                try
+                {
+                    answer = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Nie podano liczby");
+                }
+                catch (OverflowException e)
+                {
+                    Console.WriteLine("Liczba nie mieści się w rejestrze");
+                }
+
+
+                Console.WriteLine($"Podałeś wartość: {answer}");
+                #endregion propozycja 
+
+                #region ocena
+                if (answer < generatedNumber)
+                    Console.WriteLine("Za mało!");
+                else if (answer > generatedNumber)
+                    Console.WriteLine("Za dużo!");
+                else
+                {
+                    Console.WriteLine("Trafiono!");
+                    win = true;
+                }
+                    
+                #endregion ocena
+            }
+            while (!win);
 
             Console.WriteLine("Koniec gry");
         }
