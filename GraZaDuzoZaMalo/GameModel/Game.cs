@@ -2,7 +2,7 @@
 
 namespace GameModel
 {
-    public class Game
+    public partial class Game
     {
         public enum AnswerRate { TooMuch = 1, NotEnough = -1, Correct = 0 };
         public enum GameState { During, GaveUp, Won };
@@ -21,17 +21,22 @@ namespace GameModel
 
         public AnswerRate CheckAnswer(int answerToCheck)
         {
-            this.MovesCounter++;
+            AnswerRate rate;
 
             if (answerToCheck < this.answer)
-                return AnswerRate.NotEnough;
+                rate = AnswerRate.NotEnough;
+            else if (answerToCheck > this.answer)
+                rate = AnswerRate.TooMuch;
+            else
+            {
+                rate = AnswerRate.Correct;
+                this.State = GameState.Won;
+            }
 
-            if (answerToCheck > this.answer)
-                return AnswerRate.TooMuch;
+            this.MovesCounter++;
+            this.AddToHistory(answerToCheck, rate);
 
-            this.State = GameState.Won;
-
-            return AnswerRate.Correct;
+            return rate;
         }
 
         public void GiveUp()
