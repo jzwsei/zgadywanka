@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraMonolitycznie", "GraMonolitycznie\GraMonolitycznie.csproj", "{C397B4F3-D5CA-46C5-AC23-E09555D49FF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameModel", "GameModel\GameModel.csproj", "{307C3540-4FCE-4524-96C0-FE88E9FF6793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameModel", "GameModel\GameModel.csproj", "{307C3540-4FCE-4524-96C0-FE88E9FF6793}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGameUsingModel", "ConsoleGameUsingModel\ConsoleGameUsingModel.csproj", "{08DCE4F4-7FE8-4DBF-B1FF-E986A5339723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{307C3540-4FCE-4524-96C0-FE88E9FF6793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{307C3540-4FCE-4524-96C0-FE88E9FF6793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{307C3540-4FCE-4524-96C0-FE88E9FF6793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DCE4F4-7FE8-4DBF-B1FF-E986A5339723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DCE4F4-7FE8-4DBF-B1FF-E986A5339723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DCE4F4-7FE8-4DBF-B1FF-E986A5339723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DCE4F4-7FE8-4DBF-B1FF-E986A5339723}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

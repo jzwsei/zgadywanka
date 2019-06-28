@@ -17,6 +17,7 @@ namespace GameModel
             this.rangeFrom = rangeFrom;
             this.rangeTo = rangeTo;
             this.DetermineAnswer();
+            this.History = new System.Collections.Generic.List<Move>();
         }
 
         public AnswerRate CheckAnswer(int answerToCheck)
