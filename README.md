@@ -1,18 +1,9 @@
-# zgadywanka
-Gra tworzona na laboratoriach WDP
+# Za dużo, za mało
+Gra tworzona na laboratoriach WDP. Rozgrywka polega na odgadnięcu liczby wylosowanej przez komputer na podstawie podpowiedzi.
 
-# Nagłówek poziomu 1
-
-## Nagłówek poziomu 2
-
-### Nagłówek poziomu 3
-
-Metoda `Console.WriteLine()` bla bla
-
-```csharp
-int x = 1;
-x = x + 2;
-Console.WriteLine(x);
-```
-
-Rzuć okiem na stronę [tę](http://wsei.edu.pl)
+# Zawartość
+Rozwiązanie zawiera kilka projektów:
+- gra napisana monolitycznie (prototyp),
+- uniwersalny model gry,
+- aplikacja konsolowa korzystająca z modelu (brak implementacji opcji poddania się i historii ruchów),
+- aplikacja graficzna korzystająca z modelu implementująca wszystkie jego funkcjonalności.
