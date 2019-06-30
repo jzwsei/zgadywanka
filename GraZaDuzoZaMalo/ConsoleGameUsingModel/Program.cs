@@ -61,6 +61,11 @@ namespace ConsoleGameUsingModel
                     view.ShowError("Niepoprawny zapis liczby!");
                     result = 0;
                 }
+                catch (OverflowException)
+                {
+                    view.ShowError("Liczba za duża!");
+                    result = 0;
+                }
 
                 if (result <= 0)
                 {
@@ -88,6 +93,11 @@ namespace ConsoleGameUsingModel
                 catch (FormatException)
                 {
                     view.ShowError("Niepoprawny zapis liczby!");
+                    continue;
+                }
+                catch
+                {
+                    view.ShowError("Liczba za duża!");
                     continue;
                 }
 
